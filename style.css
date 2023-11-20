@@ -1,4 +1,7 @@
+
+
 /* nav bar start */
+
 nav {
     padding: 0px;
     border-radius: 0px;
@@ -308,7 +311,7 @@ color: white;
 
   }
 
-  .icon {
+ .icon {
 
     font-size: 55px;
     margin-left: auto;
@@ -395,7 +398,7 @@ color: white;
   background-color: #ffffff;
 
 }
-.round{
+ .round{
   overflow: hidden;
 margin: auto;
   border-radius: 50%;
@@ -403,7 +406,11 @@ margin: auto;
   height: 140px;
   
   border: 3px solid #e77e06;
+  transition: border 1s ;
 
+}
+.round:hover{
+  border: 3px solid #ffffff;
 }
 .linc{
   font-size: 22px;
@@ -445,8 +452,9 @@ color: #e77e06;
 margin-top: 1rem;
 
 }
-a{
-  text-decoration: none;
+a {
+  color: inherit;
+  text-decoration: none; 
 }
 @media (max-width: 575.98px) { 
   .name10 {
@@ -596,3 +604,17 @@ font-size: 40px;
 }
 
 
+#my-form-status {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+#copy-button {
+  cursor: pointer;
+  transition: all 0.4s; 
+}
+#copy-button:hover {
+ color: #e77e06;
+}
+#copied-message{
+  transition: all 0.4s;
+}

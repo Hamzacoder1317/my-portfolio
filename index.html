@@ -7,14 +7,14 @@
   <title>Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="icon" href="img/hamzateam.jpg" type="image/x-icon">
-  
+
 </head>
 <style>
 
@@ -65,7 +65,7 @@
           <p class=" name10 ">Hamza Siddiqui
           <p>
           <p class="lin2 fs-3   ">And I'm a <span class="lin3"></span></p>
-          <button type="button" class="btn1">Hire Me</button>
+          <button type="button" class="btn1"><a href=" https://www.fiverr.com/hamzacode_420 " target="_blank">Hire Me</a></button>
         </div>
       </div>
       <div class="col  " id="pic">
@@ -190,11 +190,11 @@
         <div class="Service">
           <div class="content">
             <div class="round">
-              <img src="img/assimteam.jpg" class="img-fluid" alt="">
+              <img src="img/Muhammad Ahmed.png" class="img-fluid" alt="">
             </div>
-            <h3 class="text-center text-light pt-2">Aasim Mugal </h3>
-            <p class="text-center fs-6 text-light" style="text-align: justify;">Elevate your online presence with my
-              expert web development services,</p>
+            <h3 class="text-center text-light pt-2">Muhammad Ahmed</h3>
+            <p class="text-center fs-6 text-light" style="text-align: justify;">Elevate your online presence with my SEO
+              and blogger expert services.</p>
           </div>
         </div>
         <div class="Service">
@@ -204,7 +204,7 @@
             </div>
             <h3 class="text-center text-light pt-2">Affan Iqbal</h3>
             <p class="text-center fs-6 text-light" style="text-align: justify;">Creating engaging app designs that
-              balance beauty </p>
+              balance beauty.</p>
           </div>
         </div>
       </div>
@@ -236,31 +236,50 @@
             <div><i class="bi bi-person-lines-fill icon1"></i><span class="ps-3">Hamza Siddiqui</span> </div>
           </li>
           <li>
-            <div><i class="bi bi-linkedin  icon1"></i> <span class="ps-3"> <a
-                  href="www.linkedin.com/in/hamza-siddiqui-code">linkedin/Hamza Siddiqui </a> </span></div>
+            <div><i class="bi bi-linkedin  icon1"></i> <span class="ps-3"> <a href="https://www.linkedin.com/in/hamzacoder1317" target="_blank">linkedin</a> </span></div>
           </li>
+         
           <li>
-            <div><i class="bi bi-envelope-at-fill icon1"></i> <span class="ps-3">Email/Hamzasiddiui1317@gmail.com
+            <div><i class="bi bi-github icon1"></i> <span class="ps-3"><a href="https://github.com/Hamzacoder1317" target="_blank">Git_hub</a> 
               </span></div>
           </li>
-
+         
+          <li >
+            <div class="d-flex">
+                <i class="bi bi-envelope-at-fill icon1 pb-2" style="margin-top: -0.4rem;"></i>
+                <span class="ps-3" id="email-to-copy">Hamzasiddiui1317@gmail.com</span>
+                 <!-- Copy button -->
+                <i class="bi bi-clipboard2-heart-fill ms-2" id="copy-button"></i>
+                
+                <!-- Copied message -->
+                
+                <span id="copied-message" style="display: none; color: green;">Copied!</span>
+              </div>
+            
+        </li>
         </ul>
 
       </div>
       <div class="col-lg-6 col-md-12 col-sm-12 col-12 p-3  ">
         <h3 class="fw-bold ">Message Me</h3>
-        <div class="row mt-3">
-          <div class="col me-2"> <input type="email" class="form-control" id="exampleFormControlInput1"
-              placeholder="First Name"></div>
+        <form id="my-form" action="https://formspree.io/f/xzblqoje" method="POST">
+          <div class="row mt-3">
 
-          <div class="col"> <input type="email" class="form-control" id="exampleFormControlInput1"
-              placeholder="last Name"></div>
-        </div>
-        <div class="col mt-3"><input type="email" class="form-control" id="exampleFormControlInput1"
-            placeholder="name@example.com"></div>
-        <div class="col  mt-3"> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-            placeholder="Message me.."></textarea></div>
-        <button type="button" class="btn1 mt-3">Send Me.</button>
+            <div class="col me-2"> <input type="text" class="form-control" name="First_name" placeholder="First Name"
+                required></div>
+
+            <div class="col"> <input type="text" class="form-control" name="last_name" placeholder="last Name" required>
+            </div>
+          </div>
+          <div class="col mt-3"><input type="email" name="Email" class="form-control" placeholder="name@example.com"
+              required></div>
+          <div class="col  mt-3"> <textarea class="form-control" name="Massage" rows="3" placeholder="Message me.."
+              required></textarea></div>
+          <div class="d-flex">
+            <button id="my-form-button" class="btn1 mt-3">Send Me.</button>
+            <p id="my-form-status" class=" mt-auto text-success ms-2"></p>
+          </div>
+        </form>
       </div>
 
 
@@ -341,18 +360,88 @@
 
 
 
-    
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
 
-  // Or with jQuery
+    // document.addEventListener('DOMContentLoaded', function() {
+    //   var elems = document.querySelectorAll('.sidenav');
+    //   var instances = M.Sidenav.init(elems, options);
+    // });
 
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
-        
+    var form = document.getElementById("my-form");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("my-form-status");
+  var data = new FormData(event.target);
+  
+  try {
+    const response = await fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      status.innerHTML = "Thanks for your submission!";
+      status.style.opacity = 1; // Show the status message
+      form.reset();
+      setTimeout(function() {
+        status.style.opacity = 0; // Hide the status message after 3 seconds
+      }, 3000);
+    } else {
+      const responseData = await response.json();
+      if (Object.hasOwnProperty.call(responseData, 'errors')) {
+        status.innerHTML = responseData["errors"].map(error => error["message"]).join(", ");
+      } else {
+        status.innerHTML = "Oops! There was a problem submitting your form";
+      }
+      status.style.opacity = 1; // Show the status message
+      setTimeout(function() {
+        status.style.opacity = 0; // Hide the status message after 3 seconds
+      }, 3000);
+    }
+  } catch (error) {
+    status.innerHTML = "Oops! There was a problem submitting your form";
+    status.style.opacity = 1; // Show the status message
+    setTimeout(function() {
+      status.style.opacity = 0; // Hide the status message after 3 seconds
+    }, 3000);
+  }
+}
+
+form.addEventListener("submit", handleSubmit);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+            // Find the email element and the copy button
+            var emailElement = document.getElementById('email-to-copy');
+            var copyButton = document.getElementById('copy-button');
+            var copiedMessage = document.getElementById('copied-message');
+
+            // Add click event listener to the copy button
+            copyButton.addEventListener('click', function () {
+                // Create a range and select the text
+                var range = document.createRange();
+                range.selectNode(emailElement);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+
+                // Use the Clipboard API to copy the text
+                document.execCommand('copy');
+
+                // Clear the selection
+                window.getSelection().removeAllRanges();
+
+                // Show the "Copied!" message
+                copiedMessage.style.display = 'block';
+
+                // Hide the "Copied!" message after 2 seconds
+                setTimeout(function () {
+                    copiedMessage.style.display = 'none';
+                }, 2000);
+            });
+        });
   </script>
 
 </body>
